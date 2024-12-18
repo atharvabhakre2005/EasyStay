@@ -1,0 +1,208 @@
+/* Existing Styles */
+body {
+    font-family: "Plus Jakarta Sans", serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links:hover {
+    text-decoration: underline;
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.f-info-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.5rem;
+    margin-right: 1.2rem;
+}
+
+.card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    background-color: white;
+    opacity: 0.2;
+}
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+
+/* New Styles for Listing Details Card */
+.container2 {
+    max-width: 700px !important; /* Reduced width */
+    width: 100%;
+    margin: 0 auto; /* Horizontally centers the container */
+    padding: 20px; /* Optional: Adds some space around the content */
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Subtle shadow */
+    display: block; /* Ensures it's a block-level element */
+    margin-top: 50px; /* Optional: Adds space from the top */
+}
+
+
+.listing-image {
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    text-align: center;
+}
+
+.listing-img {
+    width: 100%;
+    height: 200px; /* Reduced height */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for image */
+    transition: transform 0.3s ease;
+}
+
+
+
+.listing-details {
+    margin-top: 1rem;
+}
+
+.listing-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.listing-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.listing-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fe424d; /* Price color */
+    margin-bottom: 1rem;
+}
+
+.listing-location,
+.listing-country {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.action-buttons a, .action-buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.action-buttons a {
+    background-color: #fe424d;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.action-buttons a:hover {
+    background-color: #fe424d;
+}
+
+.action-buttons button {
+    background-color: #fe424d;
+    color: white;
+    border: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.row{
+    display: flex;
+}
+
+#map { 
+    height: 400px;
+    width: 80vh;
+}

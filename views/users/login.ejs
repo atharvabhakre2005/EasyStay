@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") -%>
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-3">Login to EasyStay</h1>
+
+    <!-- Flash Messages -->
+    <div class="col-6 offset-3">
+        <% if (success && success.length) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%= success %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+        <% if (error && error.length) { %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } %>
+    </div>
+    <!-- End Flash Messages -->
+
+    <div class="col-6 offset-3">
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    required />
+                <div class="valid-feedback">Looks good.</div>
+                <div class="invalid-feedback">Please add your username</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    required />
+                <div class="valid-feedback">Looks good.</div>
+                <div class="invalid-feedback">Please add your password</div>
+            </div>
+
+            <button class="btn btn-success">Login</button>
+        </form>
+    </div>
+</div>

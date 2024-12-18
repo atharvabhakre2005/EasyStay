@@ -1,0 +1,104 @@
+<style>
+  /* Search bar container */
+/* Search bar container */
+.navbar-nav.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+/* Search form - Scoped to the search bar */
+.navbar-nav.search-bar form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Search input styling - Scoped to the search form */
+.navbar-nav.search-bar form .form-control {
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input hover & focus - Scoped to the search form */
+.navbar-nav.search-bar form .form-control:hover,
+.navbar-nav.search-bar form .form-control:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+}
+
+/* Search button - Scoped to the search form */
+.navbar-nav.search-bar form .btn-search {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect - Scoped to the search form */
+.navbar-nav.search-bar form .btn-search:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Search icon - Scoped to the search form */
+.navbar-nav.search-bar form .btn-search i {
+  font-size: 1rem;
+}
+
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="navbar-nav ms-auto search-bar"> <!-- Added 'search-bar' class here -->
+        <form class="d-flex" role="search" action="/search" method="get">
+          <input
+            class="form-control me-2"
+            type="search"
+            name="q"  
+            placeholder="Search destinations"
+            aria-label="Search"
+          />
+          <button class="btn btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+      </div>
+
+      <!-- Additional Nav Links -->
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Showcase Your Stay</a>
+        <% if (!currUser) { %>
+          <a class="nav-link" aria-current="page" href="/login"><b>Login</b></a>
+          <a class="nav-link" href="/signup"><b>SignUp</b></a>
+        <% } else { %>
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
